@@ -1,9 +1,52 @@
-<html>
-  <head>
-    <title>Mi demo</title>
-  </head>
-  <body>
-    <h1>Hola mundo</h1>
-    <p>Esto es una prueba.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menú Satoshi</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .menu-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Menú Satoshi 🥢🍣</h1>
+
+    <img src="pagina1.jpg" alt="Página 1 del menú" class="menu-image" />
+    <img src="pagina2.jpg" alt="Página 2 del menú" class="menu-image" />
+    <img src="pagina3.jpg" alt="Página 3 del menú" class="menu-image" />
+    <img src="pagina4.jpg" alt="Página 4 del menú" class="menu-image" />
+
+    <!-- VOICEFLOW WIDGET -->
+    <script type="text/javascript">
+      (function(d, t) {
+          var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          v.onload = function() {
+            window.voiceflow.chat.load({
+              verify: { projectID: '68423ac781e92372ad75fa58' },
+              url: 'https://general-runtime.voiceflow.com',
+              versionID: 'production',
+              voice: {
+                url: "https://runtime-api.voiceflow.com"
+              }
+            });
+          }
+          v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+      })(document, 'script');
+    </script>
+
+</body>
 </html>
