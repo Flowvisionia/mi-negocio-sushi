@@ -33,22 +33,21 @@
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
         window.voiceflow.chat.load({
-          verify: { projectID: '68423ac781e92372ad75fa58' },
+          verify: { projectID: '684b59e9b587d28b57535e6c' },
           url: 'https://general-runtime.voiceflow.com',
           versionID: 'production',
-          assistant: {
-            persistence: 'memory'   // o 'sessionStorage', 'localStorage'
-          },
           voice: {
             url: "https://runtime-api.voiceflow.com"
+          },
+          assistant: {
+            persistence: 'memory'   // resetea chat al refrescar, no guarda estado en localStorage
           }
         });
       }
-      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
-      v.type = "text/javascript"; 
-      s.parentNode.insertBefore(v, s);
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
+
 
 
 </body>
