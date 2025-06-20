@@ -1,0 +1,275 @@
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Sushi</title>
+    <!-- Incluye Tailwind CSS para un diseño moderno y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define la fuente Inter, con una fallback a sans-serif */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a; /* Fondo oscuro similar a la imagen de referencia */
+            color: #f0f0f0; /* Texto claro */
+        }
+        /* Estilo para los títulos de sección */
+        .section-title {
+            color: #ff3b3b; /* Rojo para los títulos, similar al de la imagen */
+            font-size: 2.5rem; /* Tamaño de fuente grande */
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        /* Estilo para los nombres de los ítems */
+        .item-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ffffff; /* Blanco puro para los nombres */
+        }
+        /* Estilo para las descripciones */
+        .item-description {
+            font-size: 0.95rem;
+            color: #cccccc; /* Gris claro para las descripciones */
+            line-height: 1.4;
+        }
+        /* Estilo para los precios */
+        .item-price {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #ff3b3b; /* Rojo vibrante para los precios */
+            text-align: right;
+            min-width: 80px; /* Asegura un ancho mínimo para alinear precios */
+        }
+        /* Separador de línea */
+        .separator {
+            border-bottom: 1px dashed #444444; /* Línea discontinua sutil */
+            margin: 1rem 0;
+        }
+        /* Contenedor principal con márgenes y sombreado */
+        .menu-container {
+            max-width: 900px; /* Ancho máximo para una mejor lectura */
+            margin: 2rem auto;
+            padding: 2.5rem;
+            background-color: #0d0d0d; /* Fondo un poco más oscuro que el body */
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para profundidad */
+        }
+        /* Estilos específicos para el encabezado del precio de piezas */
+        .price-header {
+            color: #ff3b3b;
+            font-weight: bold;
+            text-align: center; /* Cambiado a centrado */
+            min-width: 80px; /* Añadido para igualar el ancho de la columna de precios */
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="menu-container">
+        <!-- Título principal del menú -->
+        <h1 class="text-4xl md:text-5xl font-extrabold text-center text-white mb-8">
+            <span class="text-red-500">SUSHI</span> LAND
+        </h1>
+
+        <!-- Sección de Piezas Sueltas -->
+        <div class="mb-10">
+            <!-- Eliminado el subtítulo "Piezas Sueltas" -->
+            <!-- Alineación de los encabezados X4 y X8 -->
+            <div class="flex justify-end gap-x-8 mb-4 pr-2">
+                <span class="price-header text-xl md:text-2xl">X4</span>
+                <span class="price-header text-xl md:text-2xl">X8</span>
+            </div>
+
+            <!-- Otoro -->
+            <div class="flex justify-between items-baseline mb-4">
+                <div class="flex-grow pr-4">
+                    <h3 class="item-name">Otoro (大トロ) – Ventresca de atún azul</h3>
+                    <p class="item-description">Atún rojo con textura marmolada, suave y untuosa, servido sobre arroz de sushi. Un bocado elegante y delicado, con notas intensas de umami y un toque sutil de wasabi.</p>
+                </div>
+                <div class="flex-shrink-0 flex gap-x-8">
+                    <span class="item-price">$8.500</span>
+                    <span class="item-price">$15.000</span>
+                </div>
+            </div>
+            <div class="separator"></div>
+
+            <!-- Uni -->
+            <div class="flex justify-between items-baseline mb-4">
+                <div class="flex-grow pr-4">
+                    <h3 class="item-name">Uni (うに) – Erizo de mar</h3>
+                    <p class="item-description">Erizo de mar cremoso y ligeramente dulce, servido sobre arroz de sushi y envuelto en alga nori. Un bocado intenso y marino, con textura suave y sabor profundo que evoca el océano.</p>
+                </div>
+                <div class="flex-shrink-0 flex gap-x-8">
+                    <span class="item-price">$7.800</span>
+                    <span class="item-price">$14.000</span>
+                </div>
+            </div>
+            <div class="separator"></div>
+
+            <!-- Engawa -->
+            <div class="flex justify-between items-baseline mb-4">
+                <div class="flex-grow pr-4">
+                    <h3 class="item-name">Engawa (縁側) – Aleta de lenguado</h3>
+                    <p class="item-description">Aleta de lenguado con textura firme y notas sutiles de grasa, servida sobre arroz de sushi. Un corte delicado y elegante, con sabor suave y final levemente dulce.</p>
+                </div>
+                <div class="flex-shrink-0 flex gap-x-8">
+                    <span class="item-price">$7.200</span>
+                    <span class="item-price">$13.000</span>
+                </div>
+            </div>
+            <div class="separator"></div>
+
+            <!-- Toro Taku -->
+            <div class="flex justify-between items-baseline mb-4">
+                <div class="flex-grow pr-4">
+                    <h3 class="item-name">Toro Taku – Otoro con encurtido de takuan</h3>
+                    <p class="item-description">Otoro picado combinado con rábano japonés encurtido y cebollín, envuelto en arroz y alga nori. Una mezcla crujiente y cremosa, con contraste entre la grasa del atún y el dulzor del takuan.</p>
+                </div>
+                <div class="flex-shrink-0 flex gap-x-8">
+                    <span class="item-price">$8.000</span>
+                    <span class="item-price">$14.500</span>
+                </div>
+            </div>
+            <div class="separator"></div>
+
+            <!-- Aburi Salmon con Palta y Tartare -->
+            <div class="flex justify-between items-baseline mb-4">
+                <div class="flex-grow pr-4">
+                    <h3 class="item-name">Aburi Salmon con Palta y Tartare</h3>
+                    <p class="item-description">Salmón flameado sobre arroz de sushi, coronado con crema de palta y un tartare de tomate especiado. Una fusión suave y sabrosa que realza el dulzor del salmón con un toque fresco y herbal.</p>
+                </div>
+                <div class="flex-shrink-0 flex gap-x-8">
+                    <span class="item-price">$7.500</span>
+                    <span class="item-price">$13.500</span>
+                </div>
+            </div>
+            <div class="separator"></div>
+
+            <!-- Furai Roll / Hot Roll -->
+            <div class="flex justify-between items-baseline mb-4">
+                <div class="flex-grow pr-4">
+                    <h3 class="item-name">Furai Roll / Hot Roll</h3>
+                    <p class="item-description">Roll rebozado con centro de salmón, palta, pepino, hojas verdes y nuez, cubierto con una capa crujiente y dorada. Una combinación de texturas y sabores que mezcla lo fresco, lo cremoso y lo crocante en cada bocado.</p>
+                </div>
+                <div class="flex-shrink-0 flex gap-x-8">
+                    <span class="item-price">$6.900</span>
+                    <span class="item-price">$12.500</span>
+                </div>
+            </div>
+            <div class="separator"></div>
+
+            <!-- Salmón Nigiri -->
+            <div class="flex justify-between items-baseline mb-4">
+                <div class="flex-grow pr-4">
+                    <h3 class="item-name">Salmón Nigiri</h3>
+                    <p class="item-description">Salmón crudo de corte firme y sedoso, montado sobre una porción de arroz de sushi. Una pieza simple y elegante que resalta la frescura del pescado.</p>
+                </div>
+                <div class="flex-shrink-0 flex gap-x-8">
+                    <span class="item-price">$6.800</span>
+                    <span class="item-price">$12.200</span>
+                </div>
+            </div>
+            <div class="separator"></div>
+
+            <!-- Philadelphia Roll -->
+            <div class="flex justify-between items-baseline mb-4">
+                <div class="flex-grow pr-4">
+                    <h3 class="item-name">Philadelphia Roll</h3>
+                    <p class="item-description">Salmón fresco, queso crema y pepino, envueltos en arroz de sushi con semillas de sésamo. Una combinación suave y equilibrada que mezcla lo cremoso, lo crocante y lo fresco en cada bocado.</p>
+                </div>
+                <div class="flex-shrink-0 flex gap-x-8">
+                    <span class="item-price">$6.700</span>
+                    <span class="item-price">$12.000</span>
+                </div>
+            </div>
+            <div class="separator"></div>
+
+            <!-- Salmón Roll -->
+            <div class="flex justify-between items-baseline mb-4">
+                <div class="flex-grow pr-4">
+                    <h3 class="item-name">Salmón Roll</h3>
+                    <p class="item-description">Roll envuelto en salmón crudo, con relleno de palta y mariscos en salsa cremosa. Una pieza equilibrada entre lo fresco y lo suave, con un final untuoso y sabroso.</p>
+                </div>
+                <div class="flex-shrink-0 flex gap-x-8">
+                    <span class="item-price">$7.100</span>
+                    <span class="item-price">$12.800</span>
+                </div>
+            </div>
+            <div class="separator"></div>
+
+            <!-- Tuna Nigiri o Sashimi -->
+            <div class="flex justify-between items-baseline mb-4">
+                <div class="flex-grow pr-4">
+                    <h3 class="item-name">Tuna Nigiri o Sashimi</h3>
+                    <p class="item-description">Caballa curada con vinagre, de sabor intenso y textura firme, servida sobre arroz de sushi. Una pieza clásica con perfil salino y aroma profundo, ideal para quienes buscan sabores tradicionales.</p>
+                </div>
+                <div class="flex-shrink-0 flex gap-x-8">
+                    <span class="item-price">$7.000</span>
+                    <span class="item-price">$12.600</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Combos -->
+        <div>
+            <h2 class="section-title">Combos</h2>
+
+            <!-- Combo 1 -->
+            <div class="mb-6">
+                <div class="flex justify-between items-baseline mb-2">
+                    <h3 class="item-name">Combo 1: <span class="text-red-400">X36</span> piezas</h3>
+                    <span class="item-price">$41.000</span> <!-- Precio de ejemplo para combo -->
+                </div>
+                <p class="item-description">
+                    Philadelphia Roll con palta, Philadelphia Roll tradicional, Uramaki de salmón y palta, Roll flameado con salmón y queso, Mango Roll con salsa teriyaki, Dragon Mango Roll, Nigiri de langostino rebozado (ebi tempura nigiri), Nigiri de langostino clásico (ebi nigiri), Furai Roll.
+                </p>
+            </div>
+            <div class="separator"></div>
+
+            <!-- Combo 2 -->
+            <div class="mb-6">
+                <div class="flex justify-between items-baseline mb-2">
+                    <h3 class="item-name">Combo 2: <span class="text-red-400">X30</span> piezas</h3>
+                    <span class="item-price">$53.000</span> <!-- Precio de ejemplo para combo -->
+                </div>
+                <p class="item-description">
+                    Nigiri de salmón flameado con hilos crocantes, Uramaki con topping verde y punto negro (palta + salsa de aceituna negra o similar), Uramaki con topping de salmón y salsa teriyaki (aburi de salmón), Roll envuelto en mango con centro de salmón y palta (tipo tropical roll sin arroz por fuera), Uramaki con relleno de salmón y mango (sin topping), Uramaki con topping de zanahoria frita crocante y salsa dulce (crispy roll flameado), Uramaki relleno de palta y salmón con topping de masago naranja, Uramaki con relleno de salmón y palta, sin topping (básico).
+                </p>
+            </div>
+            <div class="separator"></div>
+
+            <!-- Combo 3 -->
+            <div class="mb-6">
+                <div class="flex justify-between items-baseline mb-2">
+                    <h3 class="item-name">Combo 3: <span class="text-red-400">X30</span> piezas</h3>
+                    <span class="item-price">$65.000</span> <!-- Precio de ejemplo para combo -->
+                </div>
+                <p class="item-description">
+                    Gunkan de tartar de salmón, Nigiri de salmón, Sashimi de salmón, Maki de salmón, Uramaki de salmón, Uramaki tempurizado con topping de mayonesa y verdeo, Nigiri de anguila (unagi nigiri), Philadelphia Roll.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- VOICEFLOW WIDGET -->
+    <script type="text/javascript">
+      (function(d, t) {
+          var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          v.onload = function() {
+            window.voiceflow.chat.load({
+              verify: { projectID: '68423ac781e92372ad75fa58' },
+              url: 'https://general-runtime.voiceflow.com',
+              versionID: 'production',
+              voice: {
+                url: "https://runtime-api.voiceflow.com"
+              }
+            });
+          }
+          v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+      })(document, 'script');
+    </script>
+
+</body>
+</html>
